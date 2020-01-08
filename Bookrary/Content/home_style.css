@@ -1,0 +1,130 @@
+﻿section.container section:first-child {
+    align-items: flex-start;
+}
+
+/* color changer */
+section.color-changer div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+    section.color-changer div > * {
+        margin: 5px;
+    }
+
+    section.color-changer div select {
+        width: 90px;
+        margin-right: 10px;
+    }
+
+    section.color-changer div input#color {
+        border: none;
+    }
+
+    section.color-changer div input[type = "submit"] {
+        width: 60px;
+        margin-left: 30px;
+    }
+
+/* recomended books */
+article.recommended-books ul {
+    list-style: none;
+}
+
+    article.recommended-books ul li {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        article.recommended-books ul li > * {
+            margin: 10px;
+        }
+
+        article.recommended-books ul li form {
+            font-size: 14px;
+        }
+
+            article.recommended-books ul li form > * {
+                margin: 5px;
+            }
+
+            article.recommended-books ul li form > input[type="number"] {
+                width: 40px;
+                text-align: center;
+            }
+
+            article.recommended-books ul li form > p {
+                width: 100%;
+                /* display: block; */
+                display: none;
+                font-size: 12px;
+                text-align: center;
+                color: darkred;
+            }
+
+button#change-style {
+    width: 150px;
+}
+
+#data-base form input {
+    width: 80px;
+    margin: 5px;
+}
+
+
+#style-picker {
+    display: none;
+    /* display: flex; */
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: #000000bd;
+}
+
+    #style-picker form {
+        width: 30%;
+        height: 25%;
+        margin: 10% 10%;
+        border: 3px #181818 solid;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+        #style-picker form h3 {
+            font-size: 1.5rem;
+        }
+
+        #style-picker form div {
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 30px;
+        }
+
+            #style-picker form div:last-of-type {
+                padding: 0;
+            }
+
+            #style-picker form div label {
+                display: inline-block;
+                margin-right: 30px;
+            }
+
+        #style-picker form input[type="submit"],
+        #style-picker form input[type="reset"] {
+            width: 90px;
+            margin: 10px;
+        }
