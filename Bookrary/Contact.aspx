@@ -5,9 +5,25 @@
     <section class="container">
         <form runat="server">
             <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>
-            <input id="Text1" type="email" /><br />
+
+           
+                <asp:TextBox ID="txtemail" runat="server">
+                </asp:TextBox>
+           
+                <asp:RegularExpressionValidator ID="remail" runat="server" 
+                ControlToValidate="txtemail" ErrorMessage="Incorrect email!" 
+                ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">
+                </asp:RegularExpressionValidator>
+           
             <asp:Label ID="Label2" runat="server" Text="Topic"></asp:Label>
-            <input id="Text2" type="text" /><br />
+         
+            <asp:TextBox ID="topic" runat="server">
+            </asp:TextBox>
+            <asp:RequiredFieldValidator ID="rftopic" runat="server" 
+               ControlToValidate="topic" ErrorMessage="Enter the topic!" >
+            </asp:RequiredFieldValidator>
+            <br />
+
             <asp:Label ID="Label3" runat="server" Text="Phone"></asp:Label>
             <input id="Text3" type="number" /><br />
             <asp:TextBox ID="TextBox1" runat="server" Height="86px" Width="354px"></asp:TextBox><br />
